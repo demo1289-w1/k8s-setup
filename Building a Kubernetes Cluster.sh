@@ -174,3 +174,11 @@ sudo systemctl status kube-apiserver
 enter the READY state
 
 kubectl get nodes
+
+# watch the nodes' status
+
+kubectl get nodes -w
+
+# alias to reduce typing
+
+alias k="kubectl"
