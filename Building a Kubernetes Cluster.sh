@@ -160,11 +160,11 @@ sudo kubeadm join ...
 
 # Troubleshooting
 
-# Add ssh session timeout value to 60
+# Add ssh session timeout value to 14400 seconds or 4 hrs
 
 sudo vi ~/.ssh/ssh_config
 
-ServerAliveInterval 60
+ServerAliveInterval 14400
 
 # Verify connectivity between control and worker nodes
 
