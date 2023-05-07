@@ -154,6 +154,18 @@ kubeadm token create --print-join-command
 
 sudo kubeadm join ...
 
+# Troubleshooting
+
+# Add ssh session timeout value to 60
+
+sudo vi ~/.ssh/ssh_config
+
+ServerAliveInterval 60
+
+# Verify connectivity between control and worker nodes
+
+sudo systemctl status kube-apiserver
+
 # On the control plane node, verify all nodes in your cluster are ready. Note that it may take a few moments for all of the nodes to
 enter the READY state
 
