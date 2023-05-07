@@ -36,9 +36,9 @@ sudo vi /etc/hosts
 
 # On all nodes, add the following at the end of the file. You will need to supply the actual private IP address for each node
 
-<control plane node private IP> k8s-control
-<worker node 1 private IP> k8s-worker1
-<worker node 2 private IP> k8s-worker2
+ctl
+w1
+w2
 
 # Log out of all three servers and log back in to see these changes take effect
 
@@ -105,6 +105,10 @@ groups $USER
 # Make sure that 'disabled_plugins' is commented out in your config.toml file
 
 sudo sed -i 's/disabled_plugins/#disabled_plugins/' /etc/containerd/config.toml
+
+# Verify config.toml is updated
+
+cat /etc/containerd/config.toml |grep disabled_plugins
 
 # Restart containerd
 
