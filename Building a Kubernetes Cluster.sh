@@ -13,19 +13,22 @@
 - Distribution: Ubuntu 20.04 Focal Fossa LTS
 - Size: medium
 
+# SSH to each node
+ssh -i uk.pem ubuntu@
+
 # If you wish, you can set an appropriate hostname for each node.
 
 # On the control plane node:
 
-sudo hostnamectl set-hostname k8s-control
+sudo hostnamectl set-hostname ctl
 
 # On the first worker node:
 
-sudo hostnamectl set-hostname k8s-worker1
+sudo hostnamectl set-hostname w1
 
 # On the second worker node:
 
-sudo hostnamectl set-hostname k8s-worker2
+sudo hostnamectl set-hostname w2
 
 # On all nodes, set up the hosts file to enable all the nodes to reach each other using these hostnames
 
@@ -86,9 +89,16 @@ sudo apt-get update
 VERSION_STRING=5:23.0.1-1~ubuntu.20.04~focal
 sudo apt-get install -y docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
 
+# Add group "docker" if does not exist
+ sudo groupadd docker
+
 # Add your 'cloud_user' to the docker group
 
 sudo usermod -aG docker $USER
+
+# Verify $USER added to docker group
+
+groups $USER
 
 # Log out and log back in so that your group membership is re-evaluated
 
