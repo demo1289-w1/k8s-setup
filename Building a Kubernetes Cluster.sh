@@ -167,7 +167,6 @@ sudo kubeadm join ...
 
 sudo sh -c 'mkdir -p ~/.ssh && touch ~/.ssh/ssh_config && echo "ServerAliveInterval 14400" >> ~/.ssh/ssh_config'
 
-
 # Verify connectivity between control and worker nodes
 
 sudo systemctl status kube-apiserver
