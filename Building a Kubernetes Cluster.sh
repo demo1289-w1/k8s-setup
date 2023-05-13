@@ -165,6 +165,8 @@ sudo kubeadm join ...
 # sudo vi ~/.ssh/ssh_config
 # ServerAliveInterval 14400
 
+# Add in control server's firewall rules to allow inbound from worker nodes
+
 sudo sh -c 'mkdir -p ~/.ssh && touch ~/.ssh/ssh_config && echo "ServerAliveInterval 14400" >> ~/.ssh/ssh_config'
 
 # Verify connectivity between control and worker nodes
