@@ -10,3 +10,11 @@ kubectl rollout status deployment/rolling-deployment
 # status of pods
 kubectl get pods
 
+# have a look at current deployment
+kubectl describe deployment web-frontend -n hive
+
+# alias for kubectl
+alias k=kubectl
+
+
+
