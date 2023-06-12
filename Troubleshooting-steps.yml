@@ -1,0 +1,7 @@
+#Troubleshooting steps
+
+#Basic Pod information
+kubectl get pods
+
+#More information related to Pod
+kubectl describe pod <pod-name>
