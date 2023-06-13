@@ -5,3 +5,7 @@ kubectl get pods
 
 #More information related to Pod
 kubectl describe pod <pod-name>
+
+#Listing containers in a pod
+kubectl get pod web-frontend-7b46597bcf-xnkhb -o jsonpath='{.spec.containers[*].name}' -n hive
+
