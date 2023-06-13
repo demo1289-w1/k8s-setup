@@ -9,3 +9,5 @@ kubectl describe pod <pod-name>
 #Listing containers in a pod
 kubectl get pod web-frontend-7b46597bcf-xnkhb -o jsonpath='{.spec.containers[*].name}' -n hive
 
+#Describe a deployment
+k describe deployment auth-frontend -n comb
