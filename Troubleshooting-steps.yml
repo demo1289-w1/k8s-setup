@@ -1,13 +1,17 @@
-#Troubleshooting steps
+# Troubleshooting steps
 
-#Basic Pod information
+# Basic Pod information
 kubectl get pods
 
-#More information related to Pod
+# More information related to Pod
 kubectl describe pod <pod-name>
 
 #Listing containers in a pod
 kubectl get pod web-frontend-7b46597bcf-xnkhb -o jsonpath='{.spec.containers[*].name}' -n hive
 
-#Describe a deployment
+# Describe a deployment
 k describe deployment auth-frontend -n comb
+
+# Get a particular deployment information
+k get deployment users-rest -n hive
+
