@@ -1,9 +1,1 @@
-# ConfigMap & Secret
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: honey-config
-  namespace: hive
-data:
-  honey-config: |
-    There is always honey in the honey stand
+v
