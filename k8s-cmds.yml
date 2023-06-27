@@ -1,0 +1,31 @@
+# get all deployment name and namespace
+k get deployment --all-namesapces
+
+# edit deployment
+k edit deployment hive-mgr -n hive
+
+# update deployment with secret 
+env:
+- name: TOKEN
+  valueFrom: 
+    secretKeyRef:
+      name: hive-sec
+      key: hiveToken
+
+
+# define volumes in deployment
+volumes:
+- name: config
+  ConfigMap:
+    name: honey-config
+    items:
+    - key: honey.cfg
+      path: honey.cfg
+
+
+# define volumeMounts in deployment
+volumeMounts:
+- name: config 
+  mountPath: /config
+  readOnly: true
+  
