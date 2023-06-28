@@ -1,1 +1,7 @@
-v
+apiVersion: v1
+kind: configMap
+metadata:
+  name: honey-config
+  namespace: hive
+data:
+  
