@@ -15,3 +15,17 @@ k describe deployment auth-frontend -n comb
 # Get a particular deployment information
 k get deployment users-rest -n hive
 
+# deployment edit error msg
+# below error due to indentation of the last line
+cloud_user@k8s-control:~$ k apply -f honey-config.yml 
+error: error parsing honey-config.yml: error converting YAML to JSON: yaml: line 9: could not find expected ':'
+cloud_user@k8s-control:~$ cat honey-config.yml 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: honey-config 
+  namespace: hive
+data: 
+  honey.cfg: |
+  There is always money in the honey stand!
+cloud_user@k8s-control:~$

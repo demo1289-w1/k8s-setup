@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: honey-config
+  namespace: hive
+data: |
+  There is always money in the honey stand!
