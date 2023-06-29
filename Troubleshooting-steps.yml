@@ -29,3 +29,9 @@ data:
   honey.cfg: |
   There is always money in the honey stand!
 cloud_user@k8s-control:~$
+
+# error editing deployment hive-mgr
+cloud_user@k8s-control:~$ k edit deployment hive-mgr -n hive
+error: deployments.apps "hive-mgr" is invalid
+
+
