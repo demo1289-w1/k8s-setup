@@ -1,5 +1,8 @@
 # Troubleshooting steps
 
+# command shortcuts
+k=kubectl
+
 # Basic Pod information
 kubectl get pods
 
