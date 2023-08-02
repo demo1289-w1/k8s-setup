@@ -3,6 +3,19 @@
 # command shortcuts
 k=kubectl
 
+# Bash alias
+alias k='kubectl' alias kdro='kubectl --dry-run=client -o yaml' alias kto='kubectl config set-context $(kubectl config current-context)' alias kat='kubectl config get-contexts'
+
+# imperative create configmap
+kubectl create configmap kenobi --namespace=yoda --from-literal=planet=hoth
+
+# imperative mount configmap dry run
+kubectl create pod chewie --namespace=yoda --image=nginx:stable --dry-run=client -o yaml > pod.yaml
+
+kubectl run chewie --image=nginx:stable --namespace=yoda --dry-run=client -o yaml > pod.yaml
+
+k run chewie --image-nginx:stable -n yoda --dry-run=client -o yaml > chewie.yml
+
 # Basic Pod information
 kubectl get pods
 
