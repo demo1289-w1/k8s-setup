@@ -16,6 +16,13 @@ kubectl run chewie --image=nginx:stable --namespace=yoda --dry-run=client -o yam
 
 k run chewie --image-nginx:stable -n yoda --dry-run=client -o yaml > chewie.yml
 
+# undo rollout or rollback
+kubectl rollout undo deployment/fish
+
+# PersistentVolume
+kubectl create pv my-pv --save-config --dry-run=client -o yaml > pv.yaml
+
+
 # Basic Pod information
 kubectl get pods
 
