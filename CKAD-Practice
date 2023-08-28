@@ -1,0 +1,10 @@
+# practice for ckad exam
+# job
+# install git
+sudo apt install git-all
+
+# clone from lesson
+sudo git clone https://github.com/nigelpoulton/ckad.git
+
+# tmux 3 panes
+tmux new-session \; split-window -v \; split-window -h \; attach
