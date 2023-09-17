@@ -5,5 +5,10 @@ set et
 set ts=2
 set ai
 
-alias k=kubectl
-alias 
+# set alias
+k=kubectl
+alias ke="$k explain --recursive"
+alias ka="$k apply -f"
+alias kd="$k describe"
+alias kc="$k config --use-context"
+export do="--save-config --dry-run=client -o yaml"
